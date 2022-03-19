@@ -100,6 +100,10 @@ h2 {
     padding: 0 1.5rem;
 }
 
+.header-box-shadow {
+    box-shadow: 0 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
 .logo {
     max-width: 2.5rem;
     z-index: 3;
@@ -174,9 +178,8 @@ h2 {
 
 /* MAIN */
 /* Hero */
-
 #hero > .wrapper {
-    padding-top: 11rem;
+    min-height: auto;
 }
 
 .greeting {
@@ -207,7 +210,7 @@ h1 {
     transform: translateX(-50%);
 }
 
-/* About Me */
+/* About */
 #about > .wrapper {
     display: flex;
     flex-direction: column;
@@ -324,6 +327,15 @@ h3 {
 }
 
 /* Contact */
+#contact {
+    min-height: auto;
+    padding: 4rem 0;
+}
+
+#contact > .wrapper {
+    min-height: auto;
+}
+
 #contact h2 {
     margin-bottom: 2rem;
 }
@@ -340,4 +352,78 @@ h3 {
 footer {
     background-color: #16171a;
     padding: 0.5rem 0;
+}
+
+/* TABLET VARIATIONS */
+@media screen and (min-width: 768px) {
+    /* GENERAL */
+    .wrapper {
+        padding: 0 5rem;
+    }
+    .body-text {
+        font-size: 1.05rem;
+    }
+    /* HEADER */
+    .header {
+        padding: 0 2rem;
+    }
+    .menu-btn {
+        display: none;
+    }
+    .nav {
+        position: relative;
+        height: auto;
+        inset: 0;
+        padding: 0;
+        background-color: transparent;
+        transform: translateX(0);
+    }
+    .nav > ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    .nav > ul > li {
+        margin: 0 1rem;
+    }
+    .nav-link {
+        font-weight: 400;
+        color: var(--light-greyish-blue);
+    }
+
+    /* MAIN */
+    h2 {
+        font-size: 2rem;
+    }
+    /* Hero */
+    .greeting {
+        font-size: 1.2rem;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    .headline {
+        font-size: 3.5rem;
+    }
+    #hero .body-text {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+
+    /* About */
+    .about-img {
+        max-width: 20rem;
+        margin-top: 5rem;
+    }
+
+    /* Work */
+    .projects {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 0.5rem 1.5rem;
+    }
+    .project-card {
+        width: 48%;
+    }
 }

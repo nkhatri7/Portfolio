@@ -5,19 +5,19 @@ const overlay = document.querySelector('.overlay');
 const navLinks = document.querySelectorAll('.nav-link');
 
 const toggleMobileMenu = () => {
-    menuBtn.classList.toggle('menu-btn-open');
-    nav.classList.toggle('nav-open');
-    overlay.classList.toggle('overlay-active');
-    document.body.classList.toggle('no-scroll');
+    if (window.window.innerWidth < 768) {
+        menuBtn.classList.toggle('menu-btn-open');
+        nav.classList.toggle('nav-open');
+        overlay.classList.toggle('overlay-active');
+        document.body.classList.toggle('no-scroll');
+    }
 }
 
 menuBtn.addEventListener('click', toggleMobileMenu);
 
-if (window.window.innerWidth <= 500) {
-    navLinks.forEach((navLink) => {
-        navLink.addEventListener('click', toggleMobileMenu);
-    });
-}
+navLinks.forEach((navLink) => {
+    navLink.addEventListener('click', toggleMobileMenu);
+});
 
 // Show header when user scrolls up
 // Adaptation of @FluffyKitten's answer on StackOverflow
@@ -37,6 +37,13 @@ window.onscroll = () => {
     } else {
         // Otherwise we're scrolling down & have passed the header so hide it
         header.style.top = `-6rem`;
+    }
+
+    // Add/remove header box shadow based on position
+    if (prevScrollPos > currentScrollPos && currentScrollPos > headerBottom) {
+        header.classList.add('header-box-shadow');
+    } else {
+        header.classList.remove('header-box-shadow');
     }
 
     prevScrollPos = currentScrollPos;

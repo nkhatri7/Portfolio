@@ -85,6 +85,16 @@ h2 {
     line-height: 1.5rem;
 }
 
+.cta {
+    text-decoration: none;
+    color: var(--green);
+    font-weight: 600;
+    border: 1px solid var(--green);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    transition: all 0.25s ease-in-out;
+}
+
 /* HEADER */
 .header {
     position: fixed;
@@ -134,7 +144,7 @@ h2 {
     padding: 8rem 0 0 3rem;
     background-color: #2a3146;
     transform: translateX(100%);
-    transition: transform 500ms ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .nav > ul {
@@ -154,6 +164,7 @@ h2 {
     color: #FFFFFF;
     font-size: 1.2rem;
     font-weight: 600;
+    transition: color 0.25s ease-in-out;
 }
 
 .nav-open {
@@ -313,15 +324,6 @@ h3 {
     margin-right: 1rem;
 }
 
-.cta {
-    text-decoration: none;
-    color: var(--green);
-    font-weight: 600;
-    border: 1px solid var(--green);
-    padding: 1rem 2rem;
-    border-radius: 5px;
-}
-
 .view-more-challenges {
     margin: 2rem 0;
 }
@@ -359,9 +361,6 @@ footer {
     /* GENERAL */
     .wrapper {
         padding: 0 5rem;
-    }
-    .body-text {
-        font-size: 1.05rem;
     }
     /* HEADER */
     .header {
@@ -406,7 +405,7 @@ footer {
         font-size: 3.5rem;
     }
     #hero .body-text {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         line-height: 1.8rem;
     }
 
@@ -425,5 +424,99 @@ footer {
     }
     .project-card {
         width: 48%;
+    }
+}
+
+/* DESKTOP VARIATIONS */
+@media screen and (min-width: 1200px) {
+    /* GENERAL */
+    .cta:hover {
+        background-color: var(--green);
+        color: #FFFFFF;
+    }
+    .icon > path {
+        transition: fill 0.3s ease-in-out;
+    }
+    .icon:hover > path {
+        fill: var(--green);
+    }
+
+    /* HEADER */
+    .header {
+        max-width: none;
+    }
+    .nav-link {
+        position: relative;
+    }
+    .nav-link:hover {
+        color: var(--green);
+    }
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: var(--green);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    .nav-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    /* MAIN */
+    /* Hero */
+    h1 {
+        font-size: 4.5rem;
+    }
+    .headline {
+        font-size: 4rem;
+    }
+    #hero .body-text {
+        max-width: 40rem;
+    }
+
+    /* About */
+    #about > .wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .about-text {
+        max-width: 60%;
+    }
+    .about-img {
+        margin: 0;
+    }
+
+    /* Work */
+    .text-link {
+        position: relative;
+    }
+    .text-link::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: -2px;
+        left: 0;
+        background-color: var(--green);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    .text-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    /* GENERAL */
+    .wrapper {
+        padding: 0;
     }
 }

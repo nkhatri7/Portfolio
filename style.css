@@ -159,7 +159,12 @@ h2 {
     margin: 1.5rem 0;
 }
 
-.nav-link {
+.nav > ul > li:last-child {
+    list-style: none;
+    margin-top: 3rem;
+}
+
+.nav-link:not(.cta) {
     text-decoration: none;
     color: #FFFFFF;
     font-size: 1.2rem;
@@ -191,6 +196,7 @@ h2 {
 /* Hero */
 #hero > .wrapper {
     min-height: auto;
+    margin-top: -5rem;
 }
 
 .greeting {
@@ -210,7 +216,7 @@ h1 {
 }
 
 #hero .body-text {
-    margin-top: 1rem;
+    margin: 1rem 0 3rem 0;
 }
 
 .down-arrow {
@@ -385,7 +391,10 @@ footer {
     .nav > ul > li {
         margin: 0 1rem;
     }
-    .nav-link {
+    .nav > ul > li:last-child {
+        margin-top: 0;
+    }
+    .nav-link:not(.cta) {
         font-weight: 400;
         color: var(--light-greyish-blue);
     }
@@ -448,10 +457,10 @@ footer {
     .nav-link {
         position: relative;
     }
-    .nav-link:hover {
+    .nav-link:not(.cta):hover {
         color: var(--green);
     }
-    .nav-link::after {
+    .nav-link:not(.cta)::after {
         content: '';
         position: absolute;
         width: 100%;
@@ -463,13 +472,16 @@ footer {
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
     }
-    .nav-link:hover::after {
+    .nav-link:not(.cta):hover::after {
         transform: scaleX(1);
         transform-origin: bottom left;
     }
 
     /* MAIN */
     /* Hero */
+    #hero > .wrapper {
+        margin-top: -2.5rem;
+    }
     h1 {
         font-size: 4.5rem;
     }

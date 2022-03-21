@@ -102,7 +102,7 @@ h2 {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 6rem;
+    height: 5rem;
     z-index: 1;
     transition: top 0.5s ease-in-out;
     background-color: var(--dark-greyish-blue);
@@ -196,7 +196,7 @@ h2 {
 /* Hero */
 #hero > .wrapper {
     min-height: auto;
-    margin-top: -6rem;
+    margin-top: -5rem;
 }
 
 .greeting {
@@ -371,6 +371,7 @@ footer {
     /* HEADER */
     .header {
         padding: 0 2rem;
+        height: 6rem;
     }
     .menu-btn {
         display: none;

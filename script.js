@@ -36,7 +36,7 @@ window.onscroll = () => {
         header.style.top = "0";
     } else {
         // Otherwise we're scrolling down & have passed the header so hide it
-        header.style.top = `-6rem`;
+        header.style.top = `-5rem`;
     }
 
     // Add/remove header box shadow based on position

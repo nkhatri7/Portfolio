@@ -222,12 +222,21 @@ h1 {
     display: none;
 }
 
-.down-arrow {
-    max-width: 2rem;
+.scroll-down {
     position: absolute;
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
+    max-width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+
+.down-arrow {
+    width: 2rem;
 }
 
 /* About */
@@ -466,6 +475,9 @@ footer {
     .nav-link {
         position: relative;
     }
+    .nav-link:hover {
+        cursor: pointer;
+    }
     .nav-link:not(.cta):hover {
         color: var(--green);
     }
@@ -499,6 +511,9 @@ footer {
     }
     #hero .body-text {
         max-width: 40rem;
+    }
+    .scroll-down:hover {
+        cursor: pointer;
     }
 
     /* About */

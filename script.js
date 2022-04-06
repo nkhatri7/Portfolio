@@ -3,6 +3,8 @@ const menuBtn = document.querySelector('.menu-btn');
 const nav = document.querySelector('.nav');
 const overlay = document.querySelector('.overlay');
 const navLinks = document.querySelectorAll('.nav-link');
+const navSections = document.querySelectorAll('.nav-section');
+const scrollDownBtn = document.querySelector('.scroll-down');
 
 const toggleMobileMenu = () => {
     if (window.window.innerWidth < 768) {
@@ -18,6 +20,18 @@ menuBtn.addEventListener('click', toggleMobileMenu);
 navLinks.forEach((navLink) => {
     navLink.addEventListener('click', toggleMobileMenu);
 });
+
+const scrollToSection = (sectionName) => {
+    const section = document.getElementById(sectionName);
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+navSections.forEach((navSection) => {
+    const sectionName = navSection.dataset.section;
+    navSection.addEventListener('click', () => scrollToSection(sectionName));
+});
+
+scrollDownBtn.addEventListener('click', () => scrollToSection('about'));
 
 // Show header when user scrolls up
 // Adaptation of @FluffyKitten's answer on StackOverflow

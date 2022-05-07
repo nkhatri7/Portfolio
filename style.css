@@ -267,12 +267,24 @@ h1 {
     font-size: 1.5rem;
 }
 
-.about-img {
-    max-width: 70%;
+.about-img-wrapper {
+    background-color: var(--green);
+    overflow: hidden;
+    position: relative;
     margin-top: 2rem;
-    margin-left: -2rem;
-    border-radius: 10px;
-    box-shadow: 20px 20px var(--green);
+    border-radius: 79% 20% 33% 58% / 34% 54% 35% 59%;
+    width: 220px;
+    height: 220px;
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.about-img {
+    position: absolute;
+    max-width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Work */
@@ -374,6 +386,13 @@ footer {
     padding: 0.5rem 0;
 }
 
+@media screen and (min-width: 500px) {
+    .about-img-wrapper {
+        width: 320px;
+        height: 320px;
+    }
+}
+
 /* TABLET VARIATIONS */
 @media screen and (min-width: 768px) {
     /* GENERAL */
@@ -437,6 +456,9 @@ footer {
     }
 
     /* About */
+    .about-img-wrapper {
+        max-width: 20rem;
+    }
     .about-img {
         max-width: 20rem;
         margin-top: 5rem;

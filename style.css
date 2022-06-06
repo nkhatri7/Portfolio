@@ -366,6 +366,12 @@ h3 {
 
 #contact > .wrapper {
     min-height: auto;
+    text-align: center;
+}
+
+#contact > .wrapper > .body-text {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 #contact h2 {

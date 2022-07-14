@@ -15,8 +15,6 @@ const toggleMobileMenu = () => {
     }
 }
 
-menuBtn.addEventListener('click', toggleMobileMenu);
-
 navLinks.forEach((navLink) => {
     navLink.addEventListener('click', toggleMobileMenu);
 });
@@ -44,8 +42,8 @@ const headerBottom = header.offsetTop + header.offsetHeight;
 window.onscroll = () => {
     const currentScrollPos = window.scrollY;
 
-    /* If we're scrolling up, or we haven't passed the header,
-       show the header at the top */
+    //If we're scrolling up, or we haven't passed the header,
+    // show the header at the top
     if (prevScrollPos > currentScrollPos || currentScrollPos < headerBottom) {
         header.style.top = "0";
     } else {

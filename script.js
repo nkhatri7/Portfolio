@@ -34,7 +34,6 @@ scrollDownBtn.addEventListener('click', () => scrollToSection('about'));
 // Show header when user scrolls up
 // Adaptation of @FluffyKitten's answer on StackOverflow
 // https://stackoverflow.com/questions/63902512/js-show-hide-header-on-scroll-effect-but-only-after-the-header-has-scrolled
-
 let prevScrollPos = window.scrollY;
 const header = document.querySelector('.header');
 const headerBottom = header.offsetTop + header.offsetHeight;

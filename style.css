@@ -258,12 +258,12 @@ h1 {
     padding: 1rem 0 0 1rem;
 }
 
-.technologies-list-item {
+.technologies-list-item, .experience-point {
     list-style-image: url('./assets/chevron-right.svg');
     color: var(--light-greyish-blue);
 }
 
-.technologies-list-item::marker {
+.technologies-list-item::marker, .experience-point::marker {
     font-size: 1.5rem;
 }
 
@@ -285,6 +285,63 @@ h1 {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+}
+
+/* Experience */
+#experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.experiences-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+   gap: 2rem;
+   padding: 2rem 0;
+}
+
+.experience-container {
+    position: relative;
+    padding-left: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.experience-container:not(:last-child)::before {
+    position: absolute;
+    content: "";
+    left: 4px;
+    top: 30px;
+    height: 97.5%;
+    width: 1px;
+    background-color: var(--green);
+}
+
+.experience-container::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 8px;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: var(--green);
+}
+
+.experience-title {
+    margin-bottom: 0;
+}
+
+.experience-points {
+    padding-left: 1rem;
 }
 
 /* Work */

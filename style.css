@@ -260,12 +260,12 @@ h1 {
     padding: 1rem 0 0 1rem;
 }
 
-.technologies-list-item, .experience-point {
+.list-item {
     list-style-image: url('./assets/chevron-right.svg');
     color: var(--light-greyish-blue);
 }
 
-.technologies-list-item::marker, .experience-point::marker {
+.list-item::marker {
     font-size: 1.5rem;
 }
 
@@ -385,6 +385,14 @@ h3 {
     color: var(--green);
 }
 
+.bespoke-fridge-links-container {
+    padding: 0.5rem 0 1rem 1rem;
+}
+
+.bespoke-fridge-link > .project-link {
+    color: var(--green);
+}
+
 .app-links-container {
     margin-top: 0.5rem;
 }
@@ -404,7 +412,7 @@ h3 {
 }
 
 .project-tech {
-    margin: 0.5rem 0 2rem 0;
+    margin: 0.5rem 0 1rem 0;
     flex-wrap: wrap;
 }
 
@@ -415,6 +423,10 @@ h3 {
     color: var(--dark-greyish-blue);
     border-radius: 5px;
     font-weight: 500;
+}
+
+.project-footer-links {
+    padding-top: 1rem;
 }
 
 .project-card .github-icon {

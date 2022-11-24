@@ -352,6 +352,7 @@ h1 {
 
 .experience-points {
     padding-left: 1rem;
+    max-width: 55rem;
 }
 
 /* Work */

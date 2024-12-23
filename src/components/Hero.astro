@@ -1,0 +1,78 @@
+---
+import LinkButton from "@components/LinkButton.astro";
+import TextLink from "@components/TextLink.astro";
+---
+
+<div id="hero-section">
+  <p id="greeting">Hey there, my name is</p>
+  <h1>Neil Khatri.</h1>
+  <h2 id="headline">I build things with code.</h2>
+  <p class="body-text">
+    I'm a software engineer that enjoys building amazing digital experiences for users. Currently I'm a software engineer at 
+    <TextLink text="Mantel Group" url="https://mantelgroup.com.au/" /> working with a variety of technologies, more recently React and React Native.
+  </p>
+  <div class="button-container">
+    <LinkButton text="View resume" url="/assets/resume.pdf" />
+  </div>
+</div>
+
+<style>
+  #hero-section {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #hero-image {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: -3rem;
+  }
+
+  #greeting {
+    font-weight: 500;
+    color: var(--secondary);
+  }
+
+  h1 {
+    color: var(--accent);
+    margin-top: -0.5rem;
+    font-size: 2.5rem;
+  }
+
+  #headline {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-top: -1rem;
+    margin-bottom: -0.2rem;
+  }
+
+  .body-text {
+    max-width: 600px;
+  }
+
+  .button-container {
+    margin-top: 2rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 4rem;
+    }
+    #headline {
+      font-size: 3.5rem;
+      margin-top: -2.5rem;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    h1 {
+      font-size: 4.5rem;
+    }
+    #headline {
+      font-size: 4rem;
+    }
+  }
+</style>

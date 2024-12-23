@@ -26,6 +26,7 @@
 		--secondary: rgba(0, 0, 0, 0.75);
 		--accent: #68A76E;
 		--accent-strong: #4b8751;
+		--link: #4b8751;
 	}
 
 	*, ::before, ::after {
@@ -36,19 +37,27 @@
 
 	html,
 	body {
-		background-color: var(--background);
-		color: var(--primary);
 		font-family: 'Inter', system-ui, -apple-system, sans-serif;
 	}
 
 	html {
 		scroll-behavior: smooth;
 	}
+	html.dark {
+		--background: #22252F;
+		--primary: #ebebeb;
+		--secondary: rgba(255, 255, 255, 0.7);
+		--link: #68A76E;
+	}
 
 	body {
 		padding: 0px 20px;
 		max-width: 1440px;
 		margin: 0 auto;
+		position: relative;
+		background-color: var(--background);
+		color: var(--primary);
+		transition: background-color 0.3s ease, color 0.3s ease;
 	}
 
 	@media screen and (min-width: 768px) {

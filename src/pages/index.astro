@@ -1,12 +1,16 @@
 ---
 import ThemeToggle from '@components/ThemeToggle.astro';
+import AboutMe from '@features/aboutMe/AboutMe.astro';
+import Experience from '@features/experience/Experience.astro';
+import Hero from '@features/hero/Hero.astro';
 import Layout from '@layouts/Layout.astro';
-import AboutMe from '@sections/AboutMe.astro';
-import Hero from '@sections/Hero.astro';
 ---
 
 <Layout>
-	<Hero />
-	<AboutMe />
+	<main>
+		<Hero />
+		<AboutMe />
+		<Experience />
+	</main>
 	<ThemeToggle />
 </Layout>

@@ -1,0 +1,22 @@
+---
+import SectionHeading from "@components/SectionHeading.astro";
+import { experienceList } from "./experience.constants";
+import ExperienceItem from "./ExperienceItem.astro";
+---
+
+<section id="experience-section">
+  <SectionHeading>My experience</SectionHeading>
+  <div class="experience-list-container">
+    {experienceList.map(experience => (
+      <ExperienceItem experience={experience} />
+    ))}
+  </div>
+</section>
+
+<style>
+  .experience-list-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+</style>

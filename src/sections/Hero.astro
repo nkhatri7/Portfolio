@@ -1,20 +1,25 @@
 ---
+import BodyText from "@components/BodyText.astro";
+import FindOutMoreButton from "@components/FindOutMoreButton.astro";
 import LinkButton from "@components/LinkButton.astro";
 import TextLink from "@components/TextLink.astro";
 ---
 
-<div id="hero-section">
+<section id="hero-section">
   <p id="greeting">Hey there, my name is</p>
   <h1>Neil Khatri.</h1>
   <h2 id="headline">I build things with code.</h2>
-  <p class="body-text">
-    I'm a software engineer that enjoys building amazing digital experiences for users. Currently I'm a software engineer at 
-    <TextLink text="Mantel Group" url="https://mantelgroup.com.au/" /> working with a variety of technologies, more recently React and React Native.
-  </p>
+  <div class="body-text-container">
+    <BodyText>
+      I'm a software engineer that enjoys building amazing digital experiences for users. Currently I'm a software engineer at 
+      <TextLink text="Mantel Group" url="https://mantelgroup.com.au/" /> working with a variety of technologies, more recently React and React Native.
+    </BodyText>
+  </div>
   <div class="button-container">
     <LinkButton text="View resume" url="/assets/resume.pdf" />
+    <FindOutMoreButton />
   </div>
-</div>
+</section>
 
 <style>
   #hero-section {
@@ -46,15 +51,19 @@ import TextLink from "@components/TextLink.astro";
     font-weight: 700;
     color: var(--secondary);
     margin-top: -1rem;
-    margin-bottom: -0.2rem;
   }
 
-  .body-text {
+  .body-text-container {
     max-width: 600px;
   }
 
   .button-container {
     margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+    row-gap: 1.5rem;
   }
 
   @media screen and (min-width: 768px) {

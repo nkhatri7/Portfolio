@@ -1,0 +1,79 @@
+---
+import AppIllustration from '@assets/app-illustration.svg';
+import BodyText from '@components/BodyText.astro';
+import ListItem from "@components/ListItem.astro";
+import SectionHeading from "@components/SectionHeading.astro";
+import { Image } from 'astro:assets';
+---
+
+<section id="about-me-section">
+  <SectionHeading>What do I do?</SectionHeading>
+  <div class="about-me-container">
+    <div class="text-container">
+      <BodyText>
+        I'm a full-stack engineer that's got around 3 years of experience in the industry.
+        I've mostly done work in the web space but I've also got some experience working in the API space
+        and more recently I've been involved in the mobile space working with React Native.
+      </BodyText>
+      <BodyText>
+        Recently I also had some time to work in the generative AI space exploring what's possible with
+        LLM powered applications. I had to work with Python and Langchain during this period.
+      </BodyText>
+      <BodyText>Here are a few technologies I've been working with recently:</BodyText>
+      <ul class="technologies-list">
+        <ListItem>React Native</ListItem>
+        <ListItem>Typescript</ListItem>
+        <ListItem>GraphQL</ListItem>
+        <ListItem>React</ListItem>
+        <ListItem>Java</ListItem>
+        <ListItem>Spring</ListItem>
+      </ul>
+    </div>
+    <Image src={AppIllustration} alt="App development illustration" class="app-illustration" />
+  </div>
+</section>
+
+<style>
+  #about-me-section {
+    padding-top: 1rem;
+  }
+
+  .about-me-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .text-container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .app-illustration {
+    width: 70%;
+    max-width: 400px;
+    margin: -12rem auto -6rem auto;
+  }
+
+  .technologies-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 2rem;
+    padding: 0 0 0 1rem;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 900px) {
+    .about-me-container {
+      flex-direction: row;
+    }
+    .app-illustration {
+      margin-top: -8rem;
+    }
+  }
+</style>

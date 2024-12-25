@@ -38,16 +38,18 @@ const { type, url, accessibilityLabel } = Astro.props
     transition: background-color 0.3s ease-in-out;
   }
 
-  .social-button:hover {
-    background-color: var(--accent-strong);
-  }
-
   .icon > path {
     fill: var(--primary);
     transition: fill 0.3s ease-in-out;
   }
 
-  .social-button:hover .icon > path {
-    fill: white;
+  @media screen and (hover: hover) {
+    .social-button:hover {
+      background-color: var(--accent-strong);
+    }
+
+    .social-button:hover .icon > path {
+      fill: white;
+    }
   }
 </style>

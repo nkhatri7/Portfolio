@@ -36,7 +36,10 @@ const { icon, url, accessibilityLabel } = Astro.props
     fill: var(--primary);
     transition: fill 0.3s ease-in-out;
   }
-  .icon:hover > path {
-    fill: var(--accent);
+
+  @media screen and (hover: hover) {
+    .icon:hover > path {
+      fill: var(--accent);
+    }
   }
 </style>

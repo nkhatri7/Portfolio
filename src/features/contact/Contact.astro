@@ -1,0 +1,28 @@
+---
+import SectionHeading from "@components/SectionHeading.astro";
+import SocialButton from "@components/SocialButton.astro";
+---
+
+<section id="contact-section">
+  <SectionHeading>Reach out</SectionHeading>
+  <div class="social-links">
+    <SocialButton type="linkedin" url="https://www.linkedin.com/in/neilkhatri/" accessibilityLabel="Link to LinkedIn profile" />
+    <SocialButton type="github" url="https://github.com/nkhatri7" accessibilityLabel="Link to GitHub profile" />
+  </div>
+</section>
+
+<style>
+  #contact-section {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+</style>

@@ -2,9 +2,9 @@ import type { Project } from "./projects.types";
 
 export const projectList: Project[] = [
   {
-    name: 'SOLO by MYOB',
+    name: 'Solo by MYOB',
     description: [
-      'SOLO by MYOB is a fresh and new accounting app tailored for sole traders in Australia. It allows them to create invoices easily, track their expenses with ease by capturing their receipts and uploading it to the app, and check out their cash flow and financial reports.',
+      'Solo by MYOB is a fresh and new accounting app tailored for sole traders in Australia. It allows them to create invoices easily, track their expenses with ease by capturing their receipts and uploading it to the app, and check out their cash flow and financial reports.',
       'One of the standout features of this app is the Tap to Pay feature which allows users to take a payment on the spot via their phone and getting their customer to tap their card or phone. I was one of the two devs that built this feature in the app, working with the Stripe Terminal SDK to enable this native functionality.',
       'The app was built with React Native and currently has a ~5 star rating on the App Store and a ~4.5 star rating on the Google Play Store (at the time of writing this, it may have changed slightly).'
     ],

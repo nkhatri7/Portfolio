@@ -13,7 +13,7 @@ export const experienceList: Experience[] = [
         type: RoleType.FullTime,
         startDate: 'March 2024',
         description: [
-          'Worked on greenfield project at MYOB building their new app "SOLO by MYOB: Admin made easy" which targets sole traders in Australia. Our team managed to release the app to the app store ahead of schedule and in just under a year. I was one of the two app devs that worked on the Tap to Pay feature which is one of the distingushing features of the app, the feature allows users to take payments quickly with a tap on their phone.'
+          'Worked on greenfield project at MYOB building their new app "Solo by MYOB: Admin made easy" which targets sole traders in Australia. Our team managed to release the app to the app store ahead of schedule and in just under a year. I was one of the two app devs that worked on the Tap to Pay feature which is one of the distingushing features of the app, the feature allows users to take payments quickly with a tap on their phone.'
         ]
       },
       {

@@ -1,3 +1,7 @@
+---
+import GlobalStyles from "@styles/GlobalStyles.astro"
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -14,6 +18,7 @@
 	</head>
 	<body>
 		<slot />
+		<GlobalStyles />
 	</body>
 </html>
 
@@ -25,14 +30,8 @@
 		--accent: #68A76E;
 		--accent-strong: #4b8751;
 		--link: #4b8751;
-		--secondary-button: #dbdbdb;
-		--secondary-button-hover: #cfcfcf;
-	}
-
-	*, ::before, ::after {
-		margin: 0px;
-		padding: 0px;
-		box-sizing: border-box;
+		--secondary-button: #e4e4e4;
+		--secondary-button-hover: #d3d3d3;
 	}
 
 	html,

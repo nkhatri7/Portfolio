@@ -1,0 +1,20 @@
+---
+import ThemeToggle from '@components/ThemeToggle.astro';
+import AboutMe from '@features/aboutMe/AboutMe.astro';
+import Contact from '@features/contact/Contact.astro';
+import Experience from '@features/experience/Experience.astro';
+import Hero from '@features/hero/Hero.astro';
+import Projects from '@features/projects/Projects.astro';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout>
+	<main>
+		<Hero />
+		<AboutMe />
+		<Experience />
+		<Projects />
+		<Contact />
+	</main>
+	<ThemeToggle />
+</Layout>

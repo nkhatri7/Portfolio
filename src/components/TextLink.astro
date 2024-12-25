@@ -1,0 +1,39 @@
+---
+interface Props {
+  text: string
+  url: string
+}
+
+const { text, url } = Astro.props
+---
+
+<a href={url} target="_blank" rel="noopener noreferrer" class="text-link">{text}</a>
+
+<style>
+  .text-link {
+    text-decoration: none;
+    color: var(--link);
+  }
+
+  @media screen and (min-width: 1200px) {
+    .text-link {
+      position: relative;
+    }
+    .text-link::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background-color: var(--green);
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    .text-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+</style>

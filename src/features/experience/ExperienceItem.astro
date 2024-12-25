@@ -1,0 +1,85 @@
+---
+import { Image } from 'astro:assets'
+import type { Experience } from './experience.types'
+import BusinessLogo from '@assets/business-logo.png'
+import BodyText from '@components/BodyText.astro'
+import ListItem from '@components/ListItem.astro'
+
+interface Props {
+  experience: Experience
+}
+
+const { experience } = Astro.props
+const { companyName, companyImage, roles } = experience
+---
+
+<article class="experience-container">
+  {companyImage ? (
+    <Image src={companyImage} alt={`${companyName} logo`} class="company-logo" />
+  ) : (
+    <Image src={BusinessLogo} alt="Office illustration" class="company-logo" />
+  )}
+  <div class="experience-item-content">
+    {!!companyName && <h3 class="experience-title">{companyName}</h3>}
+    <div class="roles-container">
+      {roles.map(role => (
+        <div>
+          {companyName ? (
+            <h4 class="role-title">{role.title}</h4>
+          ) : (
+            <h3 class="role-title">{role.title}</h3>
+          )}
+          <BodyText isSecondary={true}>{role.type}</BodyText>
+          <BodyText isSecondary={true}>
+            {role.startDate} - {role.endDate ?? 'Present'}
+          </BodyText>
+          <ul class="role-description-container">
+            {role.description.map(description => (
+              <ListItem>{description}</ListItem>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</article>
+
+<style>
+  .experience-container {
+    position: relative;
+    color: var(--primary);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .company-logo {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 100px;
+  }
+
+  .experience-title, .role-title {
+    font-weight: 500;
+  }
+
+  .experience-title {
+    margin: 0.2rem 0 0.6rem 0;
+  }
+
+  .roles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .role-title {
+    margin: 0.2rem 0;
+  }
+
+  .role-description-container {
+    padding-left: 1rem;
+    line-height: 1.4rem;
+    max-width: 800px;
+  }
+</style>

@@ -1,0 +1,28 @@
+---
+interface Props {
+  text: string
+  url: string
+}
+
+const { text, url } = Astro.props
+---
+
+<div>
+  <a href={url} class="link-button" target="_blank" rel="noopener noreferrer">{text}</a>
+</div>
+
+<style>
+  .link-button {
+    text-decoration: none;
+    background-color: var(--accent-strong);
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-radius: 100px;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .link-button:hover {
+    background-color: var(--accent);
+  }
+</style>

@@ -1,0 +1,69 @@
+---
+import GlobalStyles from "@styles/GlobalStyles.astro"
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Neil Khatri - Software Engineer. View Neil's work and experience and get in contact with him.">
+		<meta name="generator" content={Astro.generator} />
+		
+    <title>Neil Khatri - Portfolio</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.svg">
+	</head>
+	<body>
+		<slot />
+		<GlobalStyles />
+	</body>
+</html>
+
+<style>
+	:root {
+		--background: #F6F6F6;
+		--primary: #191b19;
+		--secondary: rgba(0, 0, 0, 0.75);
+		--accent: #68A76E;
+		--accent-strong: #4b8751;
+		--link: #4b8751;
+		--secondary-button: #e4e4e4;
+		--secondary-button-hover: #d3d3d3;
+	}
+
+	html,
+	body {
+		font-family: 'Inter', system-ui, -apple-system, sans-serif;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+	html.dark {
+		--background: #22252F;
+		--primary: #ebebeb;
+		--secondary: rgba(255, 255, 255, 0.7);
+		--link: #68A76E;
+		--secondary-button: #35394d;
+		--secondary-button-hover: #42475e;
+	}
+
+	body {
+		padding: 0px 20px 40px 20px;
+		max-width: 1440px;
+		margin: 0 auto;
+		position: relative;
+		background-color: var(--background);
+		color: var(--primary);
+		transition: background-color 0.3s ease, color 0.3s ease;
+	}
+
+	@media screen and (min-width: 768px) {
+		body {
+			padding: 0px 40px 40px 40px;
+		}
+	}
+</style>

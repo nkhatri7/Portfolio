@@ -1,0 +1,19 @@
+---
+interface Props {
+  isSecondary?: boolean
+}
+
+const { isSecondary = false } = Astro.props
+---
+
+<p class:list={[{ secondary: isSecondary }]}><slot /></p>
+
+<style>
+  p {
+    line-height: 1.4rem;
+  }
+
+  .secondary {
+    color: var(--secondary);
+  }
+</style>

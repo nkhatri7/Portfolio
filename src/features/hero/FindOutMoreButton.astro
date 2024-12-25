@@ -1,0 +1,37 @@
+<button class="find-out-more-button">Find out more</button>
+
+<style>
+  .find-out-more-button {
+    border: none;
+    background-color: var(--secondary-button);
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 100px;
+    transition: all 0.25s ease-in-out;
+    box-sizing: border-box;
+  }
+
+  .find-out-more-button:hover {
+    background-color: var(--secondary-button-hover);
+    cursor: pointer;
+  }
+</style>
+
+<script is:inline>
+  const findOutMoreBtn = document.querySelector('.find-out-more-button')
+
+  if (findOutMoreBtn) {
+    findOutMoreBtn.addEventListener('click', () => {
+      scrollSectionIntoView('about-me-section')
+    })
+  }
+
+  const scrollSectionIntoView = (sectionId) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+</script>

@@ -22,7 +22,9 @@ const { text, url } = Astro.props
     transition: all 0.25s ease-in-out;
   }
 
-  .link-button:hover {
-    background-color: var(--accent);
+  @media screen and (hover: hover) {
+    .link-button:hover {
+      background-color: var(--accent);
+    }
   }
 </style>

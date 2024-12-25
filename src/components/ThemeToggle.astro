@@ -31,9 +31,12 @@
     width: 44px;
     transition: background-color 0.3s ease;
   }
-  #theme-toggle:hover {
-    cursor: pointer;
-    background-color: var(--secondary-button-hover);
+
+  @media screen and (hover: hover) {
+    #theme-toggle:hover {
+      cursor: pointer;
+      background-color: var(--secondary-button-hover);
+    }
   }
 
   .sun, .moon {
